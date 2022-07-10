@@ -1,0 +1,8 @@
+{
+  "name": "Groceries App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "97d2bed9"
+}

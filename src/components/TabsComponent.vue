@@ -4,18 +4,18 @@
       <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="groceries" href="/groceries">
-            <ion-icon :icon="bag"/>
+          <ion-tab-button tab="tab1" href="/tabs/tab1">
+            <ion-icon :icon="bag" />
             <ion-label>Groceries</ion-label>
           </ion-tab-button>
 
-          <ion-tab-button tab="about" href="/about">
-            <ion-icon :icon="people"/>
+          <ion-tab-button tab="tab2" href="/tabs/tab2">
+            <ion-icon :icon="people" />
             <ion-label>About</ion-label>
           </ion-tab-button>
 
-          <ion-tab-button tab="contact" href="/contact">
-            <ion-icon :icon="help"/>
+          <ion-tab-button tab="tab3" href="/tabs/tab3">
+            <ion-icon :icon="help" />
             <ion-label>Contact</ion-label>
           </ion-tab-button>
         </ion-tab-bar>
@@ -35,10 +35,10 @@ import {
   IonPage,
   IonRouterOutlet,
 } from '@ionic/vue';
-import {bag, people, help} from 'ionicons/icons';
+import { bag, people, help } from 'ionicons/icons';
 
 export default {
-  name: 'HomePage',
+  name: 'TabsComponent',
   components: {
     IonContent,
     IonLabel,

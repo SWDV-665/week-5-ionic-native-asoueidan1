@@ -27,6 +27,9 @@
           </ion-item>
           <!--          Incorporate a delete button in each item-->
           <ion-item-options>
+            <ion-button @click="editItem(index)" color="success">
+              Edit
+            </ion-button>
             <ion-button @click="deleteItem(index)" color="danger">
               Delete
             </ion-button>
@@ -69,6 +72,10 @@ export default {
     // DELETE ITEM FUNCTION
     deleteItem(itemIndex) {
       this.groceries.splice(itemIndex, 1)
+    },
+    editItem(itemIndex) {
+      let item = prompt("Please edit your item:", this.groceries[itemIndex].name);
+      this.groceries[itemIndex].name = item;
     },
   },
   computed: {

@@ -45,6 +45,7 @@ import {
   IonPage, IonList, IonItem, IonLabel, IonInput, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItemSliding, IonItemOptions
 } from '@ionic/vue';
 import {getGroceries} from "@/data/groceries";
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 
 export default {
   name: "Tab1View",
@@ -63,11 +64,12 @@ export default {
   }),
   methods: {
     // ADD ITEM FUNCTION
-    addItem() {
+    async addItem() {
       const groceries = this.groceries;
       groceries.push({name: this.itemName.trim(), quantity: parseInt(this.itemQuantity)})
       this.itemName = ''
       this.itemQuantity = ''
+      await Haptics.vibrate();
     },
     // DELETE ITEM FUNCTION
     deleteItem(itemIndex) {
